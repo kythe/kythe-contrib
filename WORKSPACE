@@ -6,15 +6,14 @@ workspace(
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
 
-KYTHE_COMMIT = "visibility"
+KYTHE_COMMIT = "06a99f97528bba4154c0a2d3363005d8047ff6a2"
 
 http_archive(
     name = "io_kythe",
-    sha256 = "64f3aa5c9928293106143a7da319e7cfc39acab995b7c63f2b27d06580dede97",
+    sha256 = "962c3d1706fba42489c5d61c8529b9191ad75c0658bf32e5957f69e33dbd083d",
     strip_prefix = "kythe-%s" % KYTHE_COMMIT,
     urls = [
-        # TODO(johnedmonds): Change to github.com/kythe/kythe when https://github.com/kythe/kythe/pull/5094 is submitted.
-        "https://github.com/johnedmonds/kythe/archive/%s.zip" % KYTHE_COMMIT,
+        "https://github.com/kythe/kythe/archive/%s.zip" % KYTHE_COMMIT,
     ],
 )
 
