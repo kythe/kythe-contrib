@@ -27,7 +27,6 @@ import scala.tools.nsc.{CompilerCommand, Global, Settings}
 import collection.JavaConverters._
 
 class VerifierTest extends FlatSpec with Matchers {
-  System.getenv().forEach((k,v)=>{System.out.println(k+"="+v);System.out.println()})
   private val baseDir = System.getProperty("user.dir")
   private def pathOf(jvmFlag: String) = {
     val jar = System.getProperty(jvmFlag)
@@ -41,14 +40,14 @@ class VerifierTest extends FlatSpec with Matchers {
         "-classpath",
         pathOf("scala.library.location"),
         "-Yrangepos",
-        "-Xplugin:kythe/scala/com/google/devtools/kythe/analyzers/scala/kythe-plugin.jar"
+        "-Xplugin:com/google/devtools/kythe/analyzers/scala/kythe-plugin.jar"
       ),
       settings
     )
     val global = new Global(command.settings)
     val filesToTest =
       new File(
-        "kythe/scala/com/google/devtools/kythe/analyzers/scala/testdata/verified"
+        "com/google/devtools/kythe/analyzers/scala/testdata/verified"
       ).listFiles()
     for (fileToTest <- filesToTest) {
       System.out.println("STARTING TEST FOR " + fileToTest)

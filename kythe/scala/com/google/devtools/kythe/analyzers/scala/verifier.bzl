@@ -16,7 +16,7 @@ def gen_verifier_tests():
                 "@io_kythe//kythe/cxx/verifier",
                 "@io_kythe//kythe/go/platform/tools/dedup_stream",
                 "@io_bazel_rules_scala_scala_library",
-            ] + ["//kythe/scala/com/google/devtools/kythe/analyzers/scala:" + path],
+            ] + ["//com/google/devtools/kythe/analyzers/scala:" + path],
             deps = [
                 "@io_bazel_rules_scala//testing/toolchain:scalatest_classpath",
                 "@io_bazel_rules_scala//third_party/utils/src/test:test_util",

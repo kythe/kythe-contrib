@@ -1,4 +1,4 @@
-package(default_visibility = ["//kythe:default_visibility"])
+package(default_visibility = ["//visibility:public"])
 
 load(
     "@io_bazel_rules_scala//scala:scala.bzl",

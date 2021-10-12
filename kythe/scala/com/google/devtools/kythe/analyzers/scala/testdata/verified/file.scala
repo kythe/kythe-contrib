@@ -16,7 +16,7 @@
 package test
 // # sig, corpus, root, path, lang
 //- File?.node/kind file
-//- vname("", "", "", "kythe/scala/com/google/devtools/kythe/analyzers/scala/testdata/verified/file.scala", "")
+//- vname("", "", "", "com/google/devtools/kythe/analyzers/scala/testdata/verified/file.scala", "")
 //-   .node/kind file
 //- VerifiedFileBinding.node/kind record
 //- @VerifiedFile defines/binding VerifiedFileBinding
